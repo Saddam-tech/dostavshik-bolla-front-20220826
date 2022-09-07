@@ -1,5 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import I_ltArwWhite from "../../img/I_ltArwWhite";
+import I_rtArwWhite from "../../img/I_rtArwWhite";
+import { onClickNextBtn, onClickPreBtn } from "../../Utils/Util";
 
 let banners = [
   {
@@ -10,17 +13,14 @@ let banners = [
 
 export default function Slider() {
   const headLineRef = useRef();
+  const [headLineIndex, setHeadLineIndex] = useState(0);
   return (
     <Container>
       <section className="headLineContainer">
         <ul ref={headLineRef}>
           {banners?.map((value, index) => (
             <li key={index}>
-              <img
-                className="mainImg"
-                src={value.imageurlpc ? value.imageurlpc : E_staking}
-                alt=""
-              />
+              <img className="mainImg" src={value.imageurlpc} alt="" />
             </li>
           ))}
         </ul>
