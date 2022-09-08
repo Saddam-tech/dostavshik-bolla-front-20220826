@@ -25,7 +25,7 @@ let banners = [
   },
 ];
 
-export default function Carousel() {
+export default function Carousel({ height, padding }) {
   const headLineRef = useRef();
   const [headLineIndex, setHeadLineIndex] = useState(0);
 
@@ -53,7 +53,7 @@ export default function Carousel() {
   }, [headLineIndex, banners]);
 
   return (
-    <Container>
+    <Container height={height} padding={padding}>
       <section className="headLineContainer">
         <ul ref={headLineRef}>
           {banners?.map((value, index) => (
@@ -90,7 +90,8 @@ export default function Carousel() {
 
 const Container = styled.div`
   position: relative;
-  padding: 92px 0 0;
+  /* padding: 92px 0 0; */
+  padding: ${({ padding }) => padding};
   width: 100%;
   overflow: hidden;
   z-index: 999;
@@ -100,7 +101,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 53vw;
+    height: ${({ height }) => height}vw;
     background: #000;
     position: relative;
 

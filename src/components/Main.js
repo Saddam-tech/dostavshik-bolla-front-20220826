@@ -21,8 +21,54 @@ import Avatar from "@mui/material/Avatar";
 import styled from "styled-components";
 import Carousel from "./Carousel/Carousel";
 import Item from "./Item/Item";
+import SubItem from "./Item/SubItem";
 
-const dummy_arr = new Array(17).fill("*");
+let dummy_arr = [
+  {
+    imageurlpc:
+      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+  },
+
+  {
+    imageurlpc:
+      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+  },
+  {
+    imageurlpc:
+      "https://www.willflyforfood.net/wp-content/uploads/2022/01/fried-chuchvara.jpg.webp",
+  },
+  {
+    imageurlpc:
+      "https://oasisinternational.travel/wp-content/uploads/2020/03/85283bdf5d1.jpg",
+  },
+  {
+    imageurlpc:
+      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+  },
+
+  {
+    imageurlpc:
+      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+  },
+  {
+    imageurlpc:
+      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+  },
+
+  {
+    imageurlpc:
+      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+  },
+  {
+    imageurlpc:
+      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+  },
+
+  {
+    imageurlpc:
+      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+  },
+];
 
 function refreshMessages() {
   const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
@@ -48,7 +94,6 @@ export default function Main() {
       <TopPanel>
         <section className="top_div">
           <FmdGoodOutlinedIcon />
-
           <div className="inner_wrap">
             <p>Home</p>
             <KeyboardArrowDownOutlinedIcon color="primary" />
@@ -59,9 +104,18 @@ export default function Main() {
           <SearchOutlinedIcon sx={{ fontSize: 30 }} />
         </div>
       </TopPanel>
-      <Carousel />
+      <Carousel height={33} padding="92px 0 0" />
       <Box sx={{ width: "100%" }} ref={ref}>
         <CssBaseline />
+        <div className="posBox">
+          <ul className="itemList" ref={firstAuctionRef}>
+            {dummy_arr.map((cont, index) => (
+              <React.Fragment key={index}>
+                <SubItem data={cont} />
+              </React.Fragment>
+            ))}
+          </ul>
+        </div>
         <section className="goto">
           <h2>Faqat Bizda</h2>
           <ArrowForwardOutlinedIcon />
@@ -70,11 +124,25 @@ export default function Main() {
           <ul className="itemList" ref={firstAuctionRef}>
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
-                <Item />
+                <Item data={cont} />
               </React.Fragment>
             ))}
           </ul>
         </div>
+        <section className="goto">
+          <h2>Top Franshizalar</h2>
+          <ArrowForwardOutlinedIcon />
+        </section>
+        <div style={{ border: "none" }} className="posBox">
+          <ul className="itemList" ref={firstAuctionRef}>
+            {dummy_arr.map((cont, index) => (
+              <React.Fragment key={index}>
+                <Item data={cont} />
+              </React.Fragment>
+            ))}
+          </ul>
+        </div>
+        <Carousel height={33} padding="0" />
         <Paper
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
           elevation={3}
@@ -118,13 +186,17 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
 
   .goto {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 20px 0;
+
+    h2 {
+      font-weight: 500;
+      font-size: 18px;
+    }
   }
 
   .posBox {
@@ -132,6 +204,7 @@ const Container = styled.div`
     align-items: center;
     position: relative;
     width: 100%;
+    border-bottom: 7px solid #efefef;
 
     .itemList {
       display: flex;

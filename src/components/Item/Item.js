@@ -3,11 +3,8 @@ import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 
 export default function Item({ data }) {
   return (
-    <Container className="appBox">
-      <img
-        src="https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg"
-        alt=""
-      />
+    <Container>
+      <img src={data.imageurlpc} alt="" />
       <section className="sub-container">
         <h3>Milliy taomlar</h3>
         <div className="paragraph">
@@ -38,6 +35,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    h3 {
+      font-weight: 500;
+    }
     .paragraph {
       display: flex;
       align-items: center;
