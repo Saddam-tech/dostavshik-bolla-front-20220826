@@ -8,16 +8,14 @@ import { onClickNextBtn, onClickPreBtn } from "../../Utils/Util";
 let banners = [
   {
     imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+      "https://static10.tgstat.ru/channels/_0/d0/d012b0e5a00043e9ce54987b3bbdaaa9.jpg",
   },
 
   {
-    imageurlpc:
-      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+    imageurlpc: "https://telegra.ph/file/d6c679c282a0423320439.jpg",
   },
   {
-    imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2022/01/fried-chuchvara.jpg.webp",
+    imageurlpc: "https://yukber.uz/image/cache/catalog/Banner3.bol-825x520.png",
   },
   {
     imageurlpc:

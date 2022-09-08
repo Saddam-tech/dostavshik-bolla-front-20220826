@@ -108,7 +108,7 @@ export default function Main() {
       <Box sx={{ width: "100%" }} ref={ref}>
         <CssBaseline />
         <div className="posBox">
-          <ul className="itemList" ref={firstAuctionRef}>
+          <ul className="itemList special_gap" ref={firstAuctionRef}>
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
                 <SubItem data={cont} />
@@ -121,7 +121,7 @@ export default function Main() {
           <ArrowForwardOutlinedIcon />
         </section>
         <div className="posBox">
-          <ul className="itemList" ref={firstAuctionRef}>
+          <ul className="itemList normal_gap" ref={firstAuctionRef}>
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
                 <Item data={cont} />
@@ -134,7 +134,7 @@ export default function Main() {
           <ArrowForwardOutlinedIcon />
         </section>
         <div style={{ border: "none" }} className="posBox">
-          <ul className="itemList" ref={firstAuctionRef}>
+          <ul className="itemList normal_gap" ref={firstAuctionRef}>
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
                 <Item data={cont} />
@@ -149,7 +149,7 @@ export default function Main() {
         </section>
         {/* New restaurants section*/}
         <div className="posBox">
-          <ul className="itemList" ref={firstAuctionRef}>
+          <ul className="itemList normal_gap" ref={firstAuctionRef}>
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
                 <Item data={cont} />
@@ -223,10 +223,16 @@ const Container = styled.div`
 
     .itemList {
       display: flex;
-      gap: 40px;
       padding: 20px;
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
+    }
+
+    .normal_gap {
+      gap: 15px;
+    }
+    .special_gap {
+      gap: 7px;
     }
   }
 `;
