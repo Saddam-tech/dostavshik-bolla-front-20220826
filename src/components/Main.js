@@ -143,6 +143,21 @@ export default function Main() {
           </ul>
         </div>
         <Carousel height={33} padding="0" />
+        <section className="goto">
+          <h2>Yangi restoranlar</h2>
+          <ArrowForwardOutlinedIcon />
+        </section>
+        {/* New restaurants section*/}
+        <div className="posBox">
+          <ul className="itemList" ref={firstAuctionRef}>
+            {dummy_arr.map((cont, index) => (
+              <React.Fragment key={index}>
+                <Item data={cont} />
+              </React.Fragment>
+            ))}
+          </ul>
+        </div>
+        {/* New restaurants section*/}
         <Paper
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
           elevation={3}

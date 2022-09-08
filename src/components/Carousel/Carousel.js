@@ -90,11 +90,9 @@ export default function Carousel({ height, padding }) {
 
 const Container = styled.div`
   position: relative;
-  /* padding: 92px 0 0; */
   padding: ${({ padding }) => padding};
   width: 100%;
   overflow: hidden;
-  z-index: 999;
 
   .headLineContainer {
     display: flex;
