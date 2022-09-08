@@ -12,7 +12,6 @@ export function onClickPreBtn(ref, itemList, index, setIndex) {
 
 export function onClickNextBtn(ref, itemList, index, setIndex) {
   if (!ref.current.children) return;
-
   const wrapWidth = ref.current.offsetWidth;
   const contWidth = ref.current.children[0].offsetWidth;
   const itemNumByPage = Math.floor(wrapWidth / contWidth);

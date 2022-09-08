@@ -1,6 +1,7 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { router } from "./components/router";
+import GlobalStyle from "./Utils/GlobalStyle";
 
 export default function App() {
   return (
@@ -12,18 +13,22 @@ export default function App() {
         crossOrigin="true"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
         rel="stylesheet"
       />
-
+      <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@500&display=swap"
+        rel="stylesheet"
+      />
+      <GlobalStyle />
       <HashRouter>
         <Routes>
-          {router.map((el, _) => (
-            <Route path={el.path} element={el.element} />
+          {router.map((el, i) => (
+            <Route key={i} path={el.path} element={el.element} />
           ))}
         </Routes>
       </HashRouter>
