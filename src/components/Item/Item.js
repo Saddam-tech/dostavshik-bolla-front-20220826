@@ -36,7 +36,9 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
     h3 {
+      padding: 5px;
       font-weight: 500;
+      font-size: 14px;
     }
     .paragraph {
       display: flex;

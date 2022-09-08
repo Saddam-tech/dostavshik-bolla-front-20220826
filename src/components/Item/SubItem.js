@@ -34,8 +34,8 @@ const Container = styled.div`
     h3 {
       text-align: center;
       font-weight: 500;
-      font-size: 12px;
-      padding: 10px;
+      font-size: 9px;
+      padding: 10px 10px 0;
     }
   }
 `;

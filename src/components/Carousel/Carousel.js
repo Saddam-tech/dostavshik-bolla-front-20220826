@@ -50,6 +50,15 @@ export default function Carousel({ height, padding }) {
     }
   }, [headLineIndex, banners]);
 
+  useEffect(() => {
+    // banner movement each 3 seconds
+    setInterval(() => {
+      if (headLineIndex < banners.length - 1) {
+        setHeadLineIndex((pre) => pre + 1);
+      } else setHeadLineIndex(0);
+    }, 3000);
+  }, []);
+
   return (
     <Container height={height} padding={padding}>
       <section className="headLineContainer">
