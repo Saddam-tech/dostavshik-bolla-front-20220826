@@ -8,11 +8,12 @@ import { onClickNextBtn, onClickPreBtn } from "../../Utils/Util";
 let banners = [
   {
     imageurlpc:
-      "https://static10.tgstat.ru/channels/_0/d0/d012b0e5a00043e9ce54987b3bbdaaa9.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPYtZwroFZLZt9EvbY--H0NgO0amxLfcCGq2jBNAOx4HPKaNhyVhE1fM4-lXm1LG1QUGU&usqp=CAU",
   },
 
   {
-    imageurlpc: "https://telegra.ph/file/d6c679c282a0423320439.jpg",
+    imageurlpc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTH5H5tUTSUrMpy177CDYuLqdLvv6lNS2HF7CGSYLnUezzjmtJgPOZwLqfeImpHTghMDA&usqp=CAU",
   },
   {
     imageurlpc: "https://yukber.uz/image/cache/catalog/Banner3.bol-825x520.png",
@@ -52,12 +53,11 @@ export default function Carousel({ height, padding }) {
 
   useEffect(() => {
     // banner movement each 3 seconds
-    setInterval(() => {
-      if (headLineIndex < banners.length - 1) {
-        setHeadLineIndex((pre) => pre + 1);
-      } else setHeadLineIndex(0);
+    let timer = setTimeout(() => {
+      onClickNextBtn(headLineRef, banners, headLineIndex, setHeadLineIndex);
     }, 3000);
-  }, []);
+    return () => clearTimeout(timer);
+  }, [headLineIndex]);
 
   return (
     <Container height={height} padding={padding}>
