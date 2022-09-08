@@ -43,10 +43,11 @@ const Container = styled.div`
       align-items: center;
       justify-content: center;
       font-weight: 50;
+      font-size: 0.9rem;
     }
     .delivery {
       font-weight: 50;
-      font-size: 12px;
+      font-size: 0.7rem;
     }
   }
 `;

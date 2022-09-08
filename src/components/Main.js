@@ -19,6 +19,9 @@ import ListItemText from "@mui/material/ListItemText";
 import Avatar from "@mui/material/Avatar";
 import styled from "styled-components";
 import Carousel from "./Carousel/Carousel";
+import Item from "./Item/Item";
+
+const dummy_arr = new Array(17).fill("*");
 
 function refreshMessages() {
   const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
@@ -31,6 +34,7 @@ function refreshMessages() {
 export default function Main() {
   const [value, setValue] = React.useState(0);
   const ref = React.useRef(null);
+  const firstAuctionRef = React.useRef();
   const [messages, setMessages] = React.useState(() => refreshMessages());
 
   React.useEffect(() => {
@@ -55,18 +59,17 @@ export default function Main() {
         </div>
       </TopPanel>
       <Carousel />
-      <Box ref={ref}>
+      <Box sx={{ width: "100%" }} ref={ref}>
         <CssBaseline />
-        <List>
-          {messages.map(({ primary, secondary, person }, index) => (
-            <ListItem button key={index + person}>
-              <ListItemAvatar>
-                <Avatar alt="Profile Picture" src={person} />
-              </ListItemAvatar>
-              <ListItemText primary={primary} secondary={secondary} />
-            </ListItem>
-          ))}
-        </List>
+        <div className="posBox">
+          <ul className="itemList" ref={firstAuctionRef}>
+            {dummy_arr.map((cont, index) => (
+              <React.Fragment key={index}>
+                <Item />
+              </React.Fragment>
+            ))}
+          </ul>
+        </div>
         <Paper
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
           elevation={3}
@@ -109,6 +112,23 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
+
+  .posBox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    .itemList {
+      display: flex;
+      gap: 40px;
+      padding: 20px;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+  }
 `;
 const TopPanel = styled.div`
   display: flex;
