@@ -53,20 +53,7 @@ export default function Carousel() {
         <ul ref={headLineRef}>
           {banners?.map((value, index) => (
             <li key={index}>
-              <div className="innerBox">
-                <span className="interview">
-                  <img src={E_interview} alt="" />
-                </span>
-
-                <p className="title">Pak on the frontier of NFTs.</p>
-
-                <p className="explain">
-                  The acclaimed anonymous art entity has been pioneering in
-                  digital spaces for decades. Here’s what’s next.
-                </p>
-
-                <p className="bottomText">ON THE FRONTIER OF NFTS.</p>
-              </div>
+              <img src={value.imageurlpc} alt="" />
             </li>
           ))}
         </ul>
@@ -97,8 +84,11 @@ export default function Carousel() {
 }
 
 const Container = styled.div`
-  padding: 72px 0 20vw 0;
+  position: relative;
+  padding: 92px 0 0;
   width: 100%;
+  overflow: hidden;
+  z-index: 999;
 
   .headLineContainer {
     display: flex;
@@ -112,7 +102,6 @@ const Container = styled.div`
     ul {
       display: flex;
       width: 100%;
-      height: inherit;
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
 
@@ -122,39 +111,12 @@ const Container = styled.div`
         align-items: center;
         min-width: 100%;
         color: #fff;
-        padding: 11.11vw 0;
         scroll-snap-align: center;
 
-        .innerBox {
-          display: flex;
-          flex-direction: column;
-          gap: 1.38vw;
-          margin: 0 11.66vw;
-
-          .interview {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 36.66vw;
-            height: 10vw;
-            border: 1.2px solid #ffffff;
-            border-radius: 8.33vw;
-          }
-
-          .title {
-            font-size: 8.33vw;
-            font-weight: 500;
-          }
-
-          .explain {
-            font-size: 4.44vw;
-            font-weight: 500;
-          }
-        }
-
-        .bottomText {
-          font-size: 4.44vw;
-          font-weight: 500;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
       }
     }

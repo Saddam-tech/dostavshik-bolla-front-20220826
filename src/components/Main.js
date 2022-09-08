@@ -6,6 +6,9 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArchiveIcon from "@mui/icons-material/Archive";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
+import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -13,6 +16,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import Avatar from "@mui/material/Avatar";
 import styled from "styled-components";
+import Carousel from "./Carousel/Carousel";
 
 function refreshMessages() {
   const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
@@ -35,13 +39,17 @@ export default function Main() {
   return (
     <Container>
       <TopPanel>
-        <p>Home</p>
-        <div>
-          <p>Bell Icon</p>
-          <p>Search Icon</p>
+        <div className="top_div">
+          <FmdGoodOutlinedIcon />
+          <p>Home</p>
+        </div>
+        <div className="top_div">
+          <NotificationsNoneRoundedIcon />
+          <SearchOutlinedIcon />
         </div>
       </TopPanel>
-      <Box sx={{ pb: 7 }} style={{ marginTop: "60px" }} ref={ref}>
+      <Carousel />
+      <Box ref={ref}>
         <CssBaseline />
         <List>
           {messages.map(({ primary, secondary, person }, index) => (
@@ -84,17 +92,18 @@ const TopPanel = styled.div`
   position: fixed;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   top: 0;
   width: 100%;
   height: 60px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 9999;
 
-  div {
+  .top_div {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 9px;
   }
 `;
 
