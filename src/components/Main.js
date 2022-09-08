@@ -11,6 +11,7 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -61,6 +62,10 @@ export default function Main() {
       <Carousel />
       <Box sx={{ width: "100%" }} ref={ref}>
         <CssBaseline />
+        <section className="goto">
+          <h2>Faqat Bizda</h2>
+          <ArrowForwardOutlinedIcon />
+        </section>
         <div className="posBox">
           <ul className="itemList" ref={firstAuctionRef}>
             {dummy_arr.map((cont, index) => (
@@ -114,6 +119,13 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
+
+  .goto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0;
+  }
 
   .posBox {
     display: flex;
