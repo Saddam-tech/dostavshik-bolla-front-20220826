@@ -10,6 +10,10 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -77,9 +81,26 @@ export default function Main() {
               setValue(newValue);
             }}
           >
-            <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-            <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-            <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+            <BottomNavigationAction
+              label="Asosiy"
+              icon={<HomeOutlinedIcon />}
+            />
+            <BottomNavigationAction
+              label="Qidirish"
+              icon={<SearchOutlinedIcon />}
+            />
+            <BottomNavigationAction
+              label="Sevimli"
+              icon={<FavoriteBorderOutlinedIcon />}
+            />
+            <BottomNavigationAction
+              label="Buyurtmalar"
+              icon={<AssignmentOutlinedIcon />}
+            />
+            <BottomNavigationAction
+              label="Profil"
+              icon={<PersonOutlineOutlinedIcon />}
+            />
           </BottomNavigation>
         </Paper>
       </Box>
