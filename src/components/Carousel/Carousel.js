@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import I_ltArwWhite from "../../img/I_ltArwWhite";
-import I_rtArwWhite from "../../img/I_rtArwWhite";
+import I_ltArwWhite from "../../img/I_ltArwWhite.svg";
+import I_rtArwWhite from "../../img/I_rtArwWhite.svg";
 import { onClickNextBtn, onClickPreBtn } from "../../Utils/Util";
 
 let banners = [
@@ -9,9 +9,17 @@ let banners = [
     imageurlpc:
       "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
   },
+  {
+    imageurlpc:
+      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+  },
+  {
+    imageurlpc:
+      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+  },
 ];
 
-export default function Slider() {
+export default function Carousel() {
   const headLineRef = useRef();
   const [headLineIndex, setHeadLineIndex] = useState(0);
   return (
