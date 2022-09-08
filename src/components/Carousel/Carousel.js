@@ -10,13 +10,18 @@ let banners = [
     imageurlpc:
       "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
   },
+
   {
     imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
   },
   {
     imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+      "https://www.willflyforfood.net/wp-content/uploads/2022/01/fried-chuchvara.jpg.webp",
+  },
+  {
+    imageurlpc:
+      "https://oasisinternational.travel/wp-content/uploads/2020/03/85283bdf5d1.jpg",
   },
 ];
 
