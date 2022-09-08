@@ -9,6 +9,7 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
+import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -39,13 +40,17 @@ export default function Main() {
   return (
     <Container>
       <TopPanel>
-        <div className="top_div">
+        <section className="top_div">
           <FmdGoodOutlinedIcon />
-          <p>Home</p>
-        </div>
+
+          <div className="inner_wrap">
+            <p>Home</p>
+            <KeyboardArrowDownOutlinedIcon color="primary" />
+          </div>
+        </section>
         <div className="top_div">
-          <NotificationsNoneRoundedIcon />
-          <SearchOutlinedIcon />
+          <NotificationsNoneRoundedIcon sx={{ fontSize: 30 }} />
+          <SearchOutlinedIcon sx={{ fontSize: 30 }} />
         </div>
       </TopPanel>
       <Carousel />
@@ -103,7 +108,13 @@ const TopPanel = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 13px;
+
+    .inner_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `;
 
