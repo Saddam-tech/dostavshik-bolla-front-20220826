@@ -4,14 +4,17 @@ import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 export default function Item({ data }) {
   return (
     <Container className="appBox">
-      <img src={data.imgsrc} alt="" />
+      <img
+        src="https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg"
+        alt=""
+      />
       <section className="sub-container">
         <h3>Milliy taomlar</h3>
         <div className="paragraph">
           <StarOutlinedIcon sx={{ color: "#fff600" }} />
           <p>4.9(386) * 1.4km</p>
         </div>
-        <p>Delivery fee </p>
+        <p className="delivery">Yetkazib berish 4,500 UZS</p>
       </section>
     </Container>
   );
@@ -21,4 +24,29 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .paragraph {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 50;
+    }
+    .delivery {
+      font-weight: 50;
+      font-size: 12px;
+    }
+  }
 `;

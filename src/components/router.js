@@ -1,4 +1,4 @@
-import Carousel from "./Carousel/Carousel";
+import Item from "./Item/Item";
 import Main from "./Main";
 
 export const router = [
@@ -8,8 +8,8 @@ export const router = [
     element: <Main />,
   },
   {
-    route: "Carousel",
-    path: "/carousel",
-    element: <Carousel />,
+    route: "Item",
+    path: "/item",
+    element: <Item />,
   },
 ];
