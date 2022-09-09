@@ -1,4 +1,4 @@
-import Item from "./Item/Item";
+import Card from "./Card/Card";
 import Main from "./Main";
 
 export const router = [
@@ -8,8 +8,8 @@ export const router = [
     element: <Main />,
   },
   {
-    route: "Item",
-    path: "/item",
-    element: <Item />,
+    route: "Card",
+    path: "/card",
+    element: <Card />,
   },
 ];

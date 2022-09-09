@@ -143,7 +143,7 @@ export default function Main() {
         </div>
         <Carousel height={33} padding="0" />
         <section className="goto">
-          <h2>Yangi restoranlar</h2>
+          <h2>Restoranlar</h2>
           <ArrowForwardOutlinedIcon />
         </section>
         {/* New restaurants section*/}
