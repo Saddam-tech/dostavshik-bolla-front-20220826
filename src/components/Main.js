@@ -13,15 +13,11 @@ import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import Paper from "@mui/material/Paper";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import ListItemText from "@mui/material/ListItemText";
-import Avatar from "@mui/material/Avatar";
 import styled from "styled-components";
 import Carousel from "./Carousel/Carousel";
 import Item from "./Item/Item";
 import SubItem from "./Item/SubItem";
+import Card from "./Card/Card";
 
 let dummy_arr = [
   {
@@ -156,9 +152,18 @@ export default function Main() {
             ))}
           </ul>
         </div>
+        {dummy_arr.map((el, i) => (
+          <Card key={i} />
+        ))}
+
         {/* New restaurants section*/}
         <Paper
-          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+          sx={{
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            right: 0,
+          }}
           elevation={3}
         >
           <BottomNavigation

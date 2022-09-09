@@ -1,26 +1,19 @@
 import styled from "styled-components";
 import React, { useState } from "react";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
-import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
-import TurnedInNotOutlinedIcon from "@mui/icons-material/TurnedInNotOutlined";
+import VerifiedIcon from "@mui/icons-material/Verified";
 
 export default function Card({ data }) {
-  const [age, setAge] = useState("");
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
   return (
     <Container>
-      <section className="sub-container">
+      {/* <section className="sub-container">
         <h3>Restoranlar</h3>
         <div className="badges">
-          <VerifiedOutlinedIcon />
-          <TurnedInNotOutlinedIcon />
+          <VerifiedIcon />
           <p>Bizning tanlov !</p>
           <div className="dropdowns"></div>
         </div>
-      </section>
+      </section> */}
       <section className="sub-container-1">
         <img
           src="https://central-asia.tours/wp-content/uploads/2020/05/uzbekistan-Food-tour-15.jpg"
@@ -62,10 +55,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  /* margin-bottom: 70px; */
 
-  .sub-container {
+  /* .sub-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -79,10 +71,11 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      gap: 5px;
       padding: 0 10px 10px;
       width: 100%;
     }
-  }
+  } */
 
   .sub-container-1 {
     display: flex;
