@@ -11,7 +11,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ListItem from "./ListItem";
 import { useNavigate } from "react-router-dom";
-export default function ItemDetail({ data }) {
+export default function ItemDetail() {
   const navigate = useNavigate();
   return (
     <Container>
