@@ -47,7 +47,7 @@ export default function ItemDetail({ data }) {
             <p className="time">12-22 min</p>
           </span>
           <span>
-            <p>Information</p>
+            <p>Malumot</p>
             <ArrowForwardIosIcon sx={{ color: "#000", fontSize: 18 }} />
           </span>
         </div>
@@ -234,7 +234,6 @@ const Container = styled.div`
         border-radius: 7px;
         border: 1px solid #f2efef;
         padding: 10px;
-        width: 500px;
 
         .sub-span-1 {
           display: flex;
@@ -253,6 +252,7 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             gap: 12px;
+            width: 170px;
 
             .stars {
               display: flex;
