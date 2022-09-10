@@ -7,11 +7,13 @@ import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import IosShareOutlinedIcon from "@mui/icons-material/IosShareOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import CollectionsIcon from "@mui/icons-material/Collections";
-
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function ItemDetail({ data }) {
   return (
     <Container>
-      <Carousel height={74} padding="0" />
+      <Carousel height={74} padding="0" objectFit="cover" />
+      {/* icons-set */}
       <section className="iconset">
         <div className="sub-1">
           <ArrowBackOutlinedIcon sx={{ color: "#fff" }} />
@@ -25,6 +27,8 @@ export default function ItemDetail({ data }) {
           <CollectionsIcon sx={{ color: "#fff" }} />
         </div>
       </section>
+      {/* icons-set */}
+      {/* header-card */}
       <section className="card">
         <h1>Milliy Taomlar</h1>
         <div className="sub-container">
@@ -34,6 +38,55 @@ export default function ItemDetail({ data }) {
           <p>4.2(804)</p>
         </div>
       </section>
+      {/* header-card */}
+      {/* header */}
+      <section className="header">
+        <div className="h-sub-container-1">
+          <span>
+            <AccessTimeIcon sx={{ color: "#000" }} />
+            <p className="time">12-22 min</p>
+          </span>
+          <span>
+            <p>Information</p>
+            <ArrowForwardIosIcon sx={{ color: "#000", fontSize: 18 }} />
+          </span>
+        </div>
+        <div className="h-sub-container-2">
+          <span className="sub-1-1">
+            <p>Yetkazib berish:</p>
+            <p>Tekin~</p>
+            <span className="more">yana korish</span>
+          </span>
+          <span className="sub-1-1">
+            <p>Min. buyurtma:</p>
+            <p>5000 UZS</p>
+          </span>
+        </div>
+        <div className="h-sub-container-3">
+          {Array.from(new Array(5)).map((_, i) => (
+            <div key={i} className="h-card">
+              <span className="sub-span-1">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBUTlDDMxHzWDEXIMMFn_bh5nleUT3Z8JWag&usqp=CAU"
+                  alt=""
+                />
+                <span className="sub-span-2">
+                  <p>Juda mazzali va tez yetib keldi, katta rahmat ...</p>
+                  <span className="stars">
+                    {Array.from(new Array(5)).map((_, i) => (
+                      <StarOutlinedIcon
+                        key={i}
+                        sx={{ color: "#ffca2d", fontSize: 20 }}
+                      />
+                    ))}
+                  </span>
+                </span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* header */}
     </Container>
   );
 }
@@ -43,6 +96,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 
   .iconset {
     display: flex;
@@ -109,6 +163,104 @@ const Container = styled.div`
 
     .sub-container {
       display: flex;
+      gap: 4px;
+      color: #3a3a3a;
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 90px;
+    height: 80vw;
+    width: 100%;
+    padding: 23px;
+
+    .h-sub-container-1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      span {
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+        gap: 10px;
+
+        .time {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .h-sub-container-2 {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 20px;
+
+      .sub-1-1 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 20px;
+
+        .more {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+          background-color: #f2efef;
+          color: #000;
+          font-size: 12px;
+          width: 90px;
+          height: 25px;
+        }
+      }
+    }
+    .h-sub-container-3 {
+      display: flex;
+      align-items: center;
+      overflow-x: scroll;
+      width: 100%;
+      gap: 10px;
+
+      .h-card {
+        display: flex;
+        border-radius: 7px;
+        border: 1px solid #f2efef;
+        padding: 10px;
+        width: 500px;
+
+        .sub-span-1 {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          color: #606060;
+          font-size: 13px;
+
+          img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+          }
+
+          .sub-span-2 {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .stars {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
     }
   }
 `;

@@ -24,7 +24,7 @@ let banners = [
   },
 ];
 
-export default function Carousel({ height, padding, btns }) {
+export default function Carousel({ height, padding, objectFit, btns }) {
   const headLineRef = useRef();
   const [headLineIndex, setHeadLineIndex] = useState(0);
 
@@ -60,7 +60,7 @@ export default function Carousel({ height, padding, btns }) {
   }, [headLineIndex]);
 
   return (
-    <Container height={height} padding={padding}>
+    <Container height={height} padding={padding} objectFit={objectFit}>
       <section className="headLineContainer">
         <ul ref={headLineRef}>
           {banners?.map((value, index) => (
@@ -137,7 +137,7 @@ const Container = styled.div`
         img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          object-fit: ${({ objectFit }) => objectFit};
         }
       }
     }
