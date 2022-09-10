@@ -34,7 +34,7 @@ export default function ItemDetail({ data }) {
         <div className="sub-container">
           <VerifiedIcon sx={{ color: "#f99500" }} />
           <p className="highlight">Tez eltuv</p>
-          <StarOutlinedIcon sx={{ color: "#ffca2d" }} />
+          <StarOutlinedIcon sx={{ color: "#ffbb00" }} />
           <p>4.2(804)</p>
         </div>
       </section>
@@ -76,7 +76,7 @@ export default function ItemDetail({ data }) {
                     {Array.from(new Array(5)).map((_, i) => (
                       <StarOutlinedIcon
                         key={i}
-                        sx={{ color: "#ffca2d", fontSize: 20 }}
+                        sx={{ color: "#ffbb00", fontSize: 20 }}
                       />
                     ))}
                   </span>
@@ -85,6 +85,19 @@ export default function ItemDetail({ data }) {
             </div>
           ))}
         </div>
+        {/* navigation  */}
+        <ul className="navigation">
+          <li className="active">Taniqli</li>
+          <li>Menyu</li>
+          <li>Qo'shimcha menyu</li>
+        </ul>
+        {/* navigation  */}
+
+        {/* content */}
+        <div className="content">
+          <h3>Taniqli</h3>
+        </div>
+        {/* content */}
       </section>
       {/* header */}
     </Container>
@@ -174,7 +187,7 @@ const Container = styled.div`
     justify-content: space-between;
     flex-direction: column;
     margin-top: 90px;
-    height: 80vw;
+    height: 90vw;
     width: 100%;
     padding: 23px;
 
@@ -260,6 +273,22 @@ const Container = styled.div`
             }
           }
         }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      border-bottom: 1px solid #cecece;
+
+      li {
+        padding: 5px;
+      }
+
+      li.active {
+        border-bottom: 2px solid #000;
       }
     }
   }
