@@ -167,7 +167,7 @@ const Container = styled.div`
     width: 90%;
     height: 140px;
     position: absolute;
-    top: 240px;
+    top: 190px;
     gap: 10px;
     box-shadow: 1px 1px 20px 0.1px #eaeaea;
     border: 0.5px solid #eaeaea;
@@ -192,7 +192,7 @@ const Container = styled.div`
     gap: 20px;
     flex-direction: column;
     margin-top: 70px;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 23px;
 
@@ -244,8 +244,11 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       overflow-x: scroll;
+      margin: 0;
+      padding: 0;
       width: 100%;
-      height: 300px;
+      overflow-y: hidden;
+      height: 150px;
       gap: 10px;
 
       .h-card {
@@ -288,9 +291,12 @@ const Container = styled.div`
       justify-content: space-evenly;
       width: 100%;
       border-bottom: 1px solid #cecece;
+      position: sticky;
+      top: 0;
+      background-color: #fff;
 
       li {
-        padding: 5px;
+        padding: 10px;
         color: #a0a0a0;
       }
 
@@ -305,6 +311,7 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
+      height: 100%;
       gap: 10px;
       overflow-y: scroll;
       scroll-snap-type: x mandatory;
