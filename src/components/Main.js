@@ -84,6 +84,12 @@ export default function Main() {
     setMessages(refreshMessages());
   }, [value, setMessages]);
 
+  function generateRandomHash() {
+    return `QmcGV8fimB7aeBxnDqr7bSS${Math.floor(
+      Math.random() * 10000 + 10000
+    )}LUWLeyFKUukGqDhWnvriQ3T`;
+  }
+
   return (
     <Container>
       <TopPanel>
@@ -124,7 +130,7 @@ export default function Main() {
           <ul className="itemList normal_gap">
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
-                <Item data={cont} />
+                <Item data={cont} itemid={generateRandomHash()} />
               </React.Fragment>
             ))}
           </ul>
@@ -137,7 +143,7 @@ export default function Main() {
           <ul className="itemList normal_gap">
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
-                <Item data={cont} />
+                <Item data={cont} itemid={generateRandomHash()} />
               </React.Fragment>
             ))}
           </ul>
@@ -152,13 +158,13 @@ export default function Main() {
           <ul className="itemList normal_gap">
             {dummy_arr.map((cont, index) => (
               <React.Fragment key={index}>
-                <Item data={cont} />
+                <Item data={cont} itemid={generateRandomHash()} />
               </React.Fragment>
             ))}
           </ul>
         </div>
         {dummy_arr.map((el, i) => (
-          <Card key={i} />
+          <Card key={i} itemid={generateRandomHash()} />
         ))}
 
         {/* New restaurants section*/}

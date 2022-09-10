@@ -1,5 +1,4 @@
 import ItemDetail from "./Item/ItemDetail";
-import ListItem from "./Item/ListItem";
 import Main from "./Main";
 
 export const router = [
@@ -10,12 +9,7 @@ export const router = [
   },
   {
     route: "ItemDetail",
-    path: "/itemdetail",
+    path: "/itemdetail/:itemid",
     element: <ItemDetail />,
-  },
-  {
-    route: "ListItem",
-    path: "/listitem",
-    element: <ListItem />,
   },
 ];

@@ -2,10 +2,12 @@ import styled from "styled-components";
 import React, { useState } from "react";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import { useNavigate } from "react-router-dom";
 
-export default function Card({ data }) {
+export default function Card({ data, itemid }) {
+  const navigate = useNavigate();
   return (
-    <Container>
+    <Container onClick={() => navigate(`/itemdetail/${itemid}`)}>
       {/* <section className="sub-container">
         <h3>Restoranlar</h3>
         <div className="badges">
