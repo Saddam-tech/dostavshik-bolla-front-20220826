@@ -9,7 +9,7 @@ export default function ListItem({ index }) {
         </span>
         <p className="price">5,900 UZS</p>
         <span>
-          <ThumbUpOutlinedIcon sx={{ fontSize: 20 }} />
+          <ThumbUpOutlinedIcon sx={{ fontSize: 20, color: "#595959" }} />
           <p>233</p>
         </span>
       </div>
