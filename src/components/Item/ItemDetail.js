@@ -9,6 +9,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import CollectionsIcon from "@mui/icons-material/Collections";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ListItem from "./ListItem";
 export default function ItemDetail({ data }) {
   return (
     <Container>
@@ -59,7 +60,7 @@ export default function ItemDetail({ data }) {
           </span>
           <span className="sub-1-1">
             <p>Min. buyurtma:</p>
-            <p>5000 UZS</p>
+            <p>5,000 UZS</p>
           </span>
         </div>
         <div className="h-sub-container-3">
@@ -95,7 +96,11 @@ export default function ItemDetail({ data }) {
 
         {/* content */}
         <div className="content">
-          <h3>Taniqli</h3>
+          <h1>Taniqli</h1>
+
+          {Array.from(new Array(8)).map((_, i) => (
+            <ListItem key={i} index={i + 1} />
+          ))}
         </div>
         {/* content */}
       </section>
@@ -184,10 +189,10 @@ const Container = styled.div`
   .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
     flex-direction: column;
-    margin-top: 90px;
-    height: 90vw;
+    margin-top: 70px;
+    height: 100vh;
     width: 100%;
     padding: 23px;
 
@@ -240,6 +245,7 @@ const Container = styled.div`
       align-items: center;
       overflow-x: scroll;
       width: 100%;
+      height: 300px;
       gap: 10px;
 
       .h-card {
@@ -285,10 +291,27 @@ const Container = styled.div`
 
       li {
         padding: 5px;
+        color: #a0a0a0;
       }
 
       li.active {
+        color: #000;
+        font-weight: 500;
         border-bottom: 2px solid #000;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      overflow-y: scroll;
+      scroll-snap-type: x mandatory;
+
+      h1 {
+        font-weight: 500;
+        font-size: 20px;
       }
     }
   }

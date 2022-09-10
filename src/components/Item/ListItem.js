@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
-export default function ListItem({ data }) {
+export default function ListItem({ index }) {
   return (
     <Container>
       <div>
-        <h3>Somsa</h3>
+        <span className="head">
+          <h3>{index}. Somsa</h3>
+        </span>
         <p className="price">5,900 UZS</p>
         <span>
           <ThumbUpOutlinedIcon sx={{ fontSize: 20 }} />
@@ -33,6 +35,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 7px;
+
+    .head {
+      display: flex;
+    }
 
     h3 {
       font-size: 22px;
