@@ -24,7 +24,7 @@ let banners = [
   },
 ];
 
-export default function Carousel({ height, padding }) {
+export default function Carousel({ height, padding, btns }) {
   const headLineRef = useRef();
   const [headLineIndex, setHeadLineIndex] = useState(0);
 
@@ -69,27 +69,36 @@ export default function Carousel({ height, padding }) {
             </li>
           ))}
         </ul>
-        <button
-          className="preBtn indexBtn"
-          onClick={() =>
-            onClickPreBtn(headLineRef, banners, headLineIndex, setHeadLineIndex)
-          }
-        >
-          <img src={I_ltArwWhite} alt="" />
-        </button>
-        <button
-          className="nextBtn indexBtn"
-          onClick={() =>
-            onClickNextBtn(
-              headLineRef,
-              banners,
-              headLineIndex,
-              setHeadLineIndex
-            )
-          }
-        >
-          <img src={I_rtArwWhite} alt="" />
-        </button>
+        {btns && (
+          <>
+            <button
+              className="preBtn indexBtn"
+              onClick={() =>
+                onClickPreBtn(
+                  headLineRef,
+                  banners,
+                  headLineIndex,
+                  setHeadLineIndex
+                )
+              }
+            >
+              <img src={I_ltArwWhite} alt="" />
+            </button>
+            <button
+              className="nextBtn indexBtn"
+              onClick={() =>
+                onClickNextBtn(
+                  headLineRef,
+                  banners,
+                  headLineIndex,
+                  setHeadLineIndex
+                )
+              }
+            >
+              <img src={I_rtArwWhite} alt="" />
+            </button>
+          </>
+        )}
       </section>
     </Container>
   );
@@ -109,6 +118,7 @@ const Container = styled.div`
     height: ${({ height }) => height}vw;
     background: #000;
     position: relative;
+    overflow: hidden;
 
     ul {
       display: flex;

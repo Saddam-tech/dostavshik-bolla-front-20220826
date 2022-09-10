@@ -99,7 +99,7 @@ export default function Main() {
           <SearchOutlinedIcon sx={{ fontSize: 30 }} />
         </div>
       </TopPanel>
-      <Carousel height={33} padding="92px 0 0" />
+      <Carousel height={43} padding="62px 0 0" btns={true} />
       <Box sx={{ width: "100%" }} ref={ref}>
         <CssBaseline />
         <div className="posBox">
@@ -137,7 +137,7 @@ export default function Main() {
             ))}
           </ul>
         </div>
-        <Carousel height={33} padding="0" />
+        <Carousel height={33} padding="0" btns={true} />
         <section className="goto">
           <h2>Restoranlar</h2>
           <ArrowForwardOutlinedIcon />
