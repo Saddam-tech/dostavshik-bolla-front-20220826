@@ -10,14 +10,19 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ListItem from "./ListItem";
+import { useNavigate } from "react-router-dom";
 export default function ItemDetail({ data }) {
+  const navigate = useNavigate();
   return (
     <Container>
       <Carousel height={74} padding="0" objectFit="cover" />
       {/* icons-set */}
       <section className="iconset">
         <div className="sub-1">
-          <ArrowBackOutlinedIcon sx={{ color: "#fff" }} />
+          <ArrowBackOutlinedIcon
+            onClick={() => navigate(-1)}
+            sx={{ color: "#fff" }}
+          />
           <div className="sub-1-1">
             <IosShareOutlinedIcon sx={{ color: "#fff" }} />
             <FavoriteBorderOutlinedIcon sx={{ color: "#fff" }} />
