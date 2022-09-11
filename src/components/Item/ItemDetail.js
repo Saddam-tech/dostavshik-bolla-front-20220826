@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { navigationitems } from "../helper";
 export default function ItemDetail() {
   const navigate = useNavigate();
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
   return (
     <Container>
       <Carousel height={74} padding="0" objectFit="cover" />
@@ -302,7 +302,7 @@ const Container = styled.div`
     .navigation {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      gap: 50px;
       width: 100%;
       height: 58px;
       border-bottom: 1px solid #cecece;
