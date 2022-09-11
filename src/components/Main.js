@@ -236,6 +236,15 @@ const Container = styled.div`
       scroll-snap-type: x mandatory;
     }
 
+    .itemList::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .itemList {
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
+    }
+
     .normal_gap {
       gap: 15px;
       padding: 20px;

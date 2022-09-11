@@ -143,6 +143,15 @@ const Container = styled.div`
       }
     }
 
+    .ul::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .ul {
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
+    }
+
     .indexBtn {
       position: absolute;
 
