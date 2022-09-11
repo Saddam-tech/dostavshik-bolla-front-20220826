@@ -2,10 +2,10 @@ import styled from "styled-components";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import { useNavigate } from "react-router-dom";
 
-export default function Item({ data, itemid }) {
+export default function Item({ data, uuid }) {
   const navigate = useNavigate();
   return (
-    <Container onClick={() => navigate(`/itemdetail/${itemid}`)}>
+    <Container onClick={() => navigate(`/itemdetail/${uuid}`)}>
       <img src={data.imageurlpc} alt="" />
       <section className="sub-container">
         <h3>Milliy taomlar</h3>

@@ -12,15 +12,9 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ListItem from "./ListItem";
 import { useNavigate } from "react-router-dom";
 import { navigationitems } from "../helper";
-export default function ItemDetail() {
+export default function OrderItemDetail() {
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(1);
-
-  function generateRandomHash() {
-    return `QmcGV8fimB7aeBxnDqr7bSS${Math.floor(
-      Math.random() * 10000 + 10000
-    )}LUWLeyFKUukGqDhWnvriQ3T`;
-  }
   return (
     <Container>
       <Carousel height={74} padding="0" objectFit="cover" />
@@ -42,17 +36,7 @@ export default function ItemDetail() {
         </div>
       </section>
       {/* icons-set */}
-      {/* header-card */}
-      <section className="card">
-        <h1>Milliy Taomlar</h1>
-        <div className="sub-container">
-          <VerifiedIcon sx={{ color: "#f99500" }} />
-          <p className="highlight">Yaguar eltuv</p>
-          <StarOutlinedIcon sx={{ color: "#ffbb00" }} />
-          <p>4.2(804)</p>
-        </div>
-      </section>
-      {/* header-card */}
+
       {/* header */}
       <section className="header">
         <div className="h-sub-container-1">
@@ -119,7 +103,7 @@ export default function ItemDetail() {
           <h1>{navigationitems[activeIndex]}</h1>
 
           {Array.from(new Array(8)).map((_, i) => (
-            <ListItem key={i} index={i + 1} itemid={generateRandomHash()} />
+            <ListItem key={i} index={i + 1} />
           ))}
         </div>
         {/* content */}

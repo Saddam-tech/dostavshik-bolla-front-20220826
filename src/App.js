@@ -1,5 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
+import OrderItemDetail from "./components/Item/OrderItemDetail";
 import { router } from "./components/router";
 import GlobalStyle from "./Utils/GlobalStyle";
 

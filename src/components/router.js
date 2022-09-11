@@ -1,4 +1,5 @@
 import ItemDetail from "./Item/ItemDetail";
+import OrderItemDetail from "./Item/OrderItemDetail";
 import Main from "./Main";
 
 export const router = [
@@ -9,7 +10,12 @@ export const router = [
   },
   {
     route: "ItemDetail",
-    path: "/itemdetail/:itemid",
+    path: "/itemdetail/:uuid",
     element: <ItemDetail />,
+  },
+  {
+    route: "OrderItemDetail",
+    path: "orderitemdetail/:itemid",
+    element: <OrderItemDetail />,
   },
 ];

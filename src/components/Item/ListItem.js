@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
-export default function ListItem({ index }) {
+import { useNavigate } from "react-router-dom";
+export default function ListItem({ index, itemid }) {
+  const navigate = useNavigate();
   return (
-    <Container>
+    <Container onClick={() => navigate(`orderitemdetail/${itemid}`)}>
       <div>
         <span className="head">
           <h3>{index}. Somsa</h3>
