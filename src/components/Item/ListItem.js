@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 export default function ListItem({ index }) {
   return (
     <Container>
@@ -14,10 +15,17 @@ export default function ListItem({ index }) {
         </span>
       </div>
 
-      <img
-        src="https://www.letsgouzbekistan.com/uploads/images/Uzbek_meals/somsa-191.jpg"
-        alt=""
-      />
+      <div className="spec_img">
+        <img
+          src="https://www.letsgouzbekistan.com/uploads/images/Uzbek_meals/somsa-191.jpg"
+          alt=""
+        />
+        <span className="cartWrap">
+          <AddShoppingCartOutlinedIcon
+            sx={{ fontSize: 20, color: "#00d3fc" }}
+          />
+        </span>
+      </div>
     </Container>
   );
 }
@@ -59,9 +67,27 @@ const Container = styled.div`
     }
   }
 
-  img {
+  .spec_img {
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    position: relative;
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .cartWrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      box-shadow: 1px 1px 5px #595959;
+    }
   }
 `;
