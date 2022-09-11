@@ -62,7 +62,7 @@ export default function ItemDetail() {
             <p className="time">12-22 min</p>
           </span>
           <span>
-            <p>Malumot</p>
+            <p>Ma'lumot</p>
             <ArrowForwardIosIcon sx={{ color: "#000", fontSize: 18 }} />
           </span>
         </div>

@@ -22,47 +22,41 @@ import Card from "./Card/Card";
 let dummy_arr = [
   {
     imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+      "https://media.istockphoto.com/photos/fresh-tasty-burger-picture-id495204032?k=20&m=495204032&s=612x612&w=0&h=x44AnT8kHv-apqnG9t1ILwf2sIr4uq14CUB7MBaiuOI=",
+  },
+
+  {
+    imageurlpc: "https://s3.envato.com/files/278887276/burger1148.jpg",
+  },
+  {
+    imageurlpc: "https://s3.envato.com/files/255251442/bur6791.jpg",
+  },
+  {
+    imageurlpc: "https://s3.envato.com/files/255251442/bur6791.jpg",
+  },
+  {
+    imageurlpc: "https://s3.envato.com/files/223964286/IMG_0299.jpg",
   },
 
   {
     imageurlpc:
-      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+      "https://www.eatthis.com/wp-content/uploads/sites/4/2020/06/hamburger-french-fries.jpg?quality=82&strip=1",
   },
   {
-    imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2022/01/fried-chuchvara.jpg.webp",
-  },
-  {
-    imageurlpc:
-      "https://oasisinternational.travel/wp-content/uploads/2020/03/85283bdf5d1.jpg",
-  },
-  {
-    imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+    imageurlpc: "https://s3.envato.com/files/223964286/IMG_0299.jpg",
   },
 
   {
     imageurlpc:
-      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+      "https://static1.bigstockphoto.com/3/9/3/large1500/393752210.jpg",
   },
   {
-    imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
-  },
-
-  {
-    imageurlpc:
-      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
-  },
-  {
-    imageurlpc:
-      "https://www.willflyforfood.net/wp-content/uploads/2021/12/uzbek-food-plov.jpg",
+    imageurlpc: "https://restonic.com/wp-content/uploads/2015/05/02E77792.jpg",
   },
 
   {
     imageurlpc:
-      "https://cs7.pikabu.ru/post_img/2017/12/19/9/1513698805118134083.jpg",
+      "https://static1.bigstockphoto.com/3/9/3/large1500/393752210.jpg",
   },
 ];
 

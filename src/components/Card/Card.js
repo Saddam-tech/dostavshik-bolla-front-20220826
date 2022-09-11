@@ -18,17 +18,17 @@ export default function Card({ data, itemid }) {
       </section> */}
       <section className="sub-container-1">
         <img
-          src="https://central-asia.tours/wp-content/uploads/2020/05/uzbekistan-Food-tour-15.jpg"
+          src="https://media.istockphoto.com/photos/fresh-tasty-burger-picture-id495204032?k=20&m=495204032&s=612x612&w=0&h=x44AnT8kHv-apqnG9t1ILwf2sIr4uq14CUB7MBaiuOI="
           alt=""
         />
 
         <div className="sub-container-2">
           <img
-            src="https://s1.tchkcdn.com/g-5qKpL239UPqMe2bZtx0ruA/13/472023/660x480/f/0/538_kebab_na_mangale_depositphotos_68775381.jpg"
+            src="https://s3.envato.com/files/278887276/burger1148.jpg"
             alt=""
           />
           <img
-            src="https://qph.cf2.quoracdn.net/main-qimg-cf82d71810a2117a545b082b5b9df530-lq"
+            src="https://media.istockphoto.com/photos/fresh-tasty-burger-picture-id495204032?k=20&m=495204032&s=612x612&w=0&h=x44AnT8kHv-apqnG9t1ILwf2sIr4uq14CUB7MBaiuOI="
             alt=""
           />
         </div>

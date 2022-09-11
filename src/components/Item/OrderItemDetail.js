@@ -9,15 +9,20 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import CollectionsIcon from "@mui/icons-material/Collections";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 import { useNavigate, useParams } from "react-router-dom";
 import { options } from "../helper";
 export default function OrderItemDetail() {
   const navigate = useNavigate();
   const { uuid, itemid } = useParams();
   const [activeIndex, setActiveIndex] = useState(1);
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+
   return (
     <Container>
-      <Carousel height={74} padding="0" objectFit="cover" />
+      <Carousel height={52} padding="0" objectFit="cover" />
       {/* icons-set */}
       <section className="iconset">
         <div className="sub-1">
@@ -49,9 +54,13 @@ export default function OrderItemDetail() {
           <span>
             <p className="bold">Miqdor</p>
             <span className="incrdecr">
-              <RemoveCircleOutlineOutlinedIcon />
+              <RemoveCircleOutlineOutlinedIcon
+                sx={{ color: "#a0a0a0", fontSize: 30 }}
+              />
               <p>1</p>
-              <AddCircleOutlineOutlinedIcon />
+              <AddCircleOutlineOutlinedIcon
+                sx={{ color: "#a0a0a0", fontSize: 30 }}
+              />
             </span>
           </span>
         </div>
@@ -59,12 +68,23 @@ export default function OrderItemDetail() {
           <div className="header">
             <h3>Qoshimcha tanlovlar</h3>
           </div>
+
           <div className="inner-div">
             <ul>
               {options.map((el, i) => (
-                <li key={i}>
-                  {" "}
-                  <input type="checkbox" /> {el}
+                <li>
+                  <FormGroup>
+                    <FormControlLabel
+                      sx={{
+                        "& .MuiSvgIcon-root": {
+                          fontSize: 35,
+                        },
+                      }}
+                      control={<Checkbox />}
+                      label={el.label}
+                    />{" "}
+                  </FormGroup>
+                  <p>{el.price}</p>
                 </li>
               ))}
             </ul>
@@ -72,6 +92,7 @@ export default function OrderItemDetail() {
         </div>
       </section>
       {/* content */}
+      <button>Savatchaga qo'shmoq</button>
     </Container>
   );
 }
@@ -82,13 +103,14 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 
   .iconset {
     display: flex;
     width: 100%;
     position: absolute;
     padding: 25px;
-    top: 20px;
+    top: 3px;
     flex-direction: column;
     justify-content: space-between;
     height: 54vw;
@@ -165,5 +187,50 @@ const Container = styled.div`
         }
       }
     }
+
+    .sub-section-2 {
+      width: 100%;
+      margin-bottom: 280px;
+      .header {
+        width: 100%;
+        background-color: #f4f4f4;
+        h3 {
+          font-weight: 550;
+          font-size: 18px;
+          padding: 20px;
+        }
+      }
+
+      .inner-div {
+        padding: 10px;
+        ul {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          width: 100%;
+          li {
+            display: flex;
+            align-items: center;
+            color: #000;
+            font-size: 18px;
+            p {
+              color: #a0a0a0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    height: 90px;
+    width: 100%;
+    margin-top: 60px;
+    color: #fff;
+    background-color: #0ab9ff;
+    font-weight: 550;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
   }
 `;

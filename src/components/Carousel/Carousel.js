@@ -8,19 +8,20 @@ import { onClickNextBtn, onClickPreBtn } from "../../Utils/Util";
 let banners = [
   {
     imageurlpc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPYtZwroFZLZt9EvbY--H0NgO0amxLfcCGq2jBNAOx4HPKaNhyVhE1fM4-lXm1LG1QUGU&usqp=CAU",
+      "https://previews.123rf.com/images/tul/tul1705/tul170500047/79022622-fast-food-vector-trendy-banner-design-concept-modern-style-with-thin-line-art-fast-food-icons-on-gra.jpg",
   },
 
   {
     imageurlpc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTH5H5tUTSUrMpy177CDYuLqdLvv6lNS2HF7CGSYLnUezzjmtJgPOZwLqfeImpHTghMDA&usqp=CAU",
-  },
-  {
-    imageurlpc: "https://yukber.uz/image/cache/catalog/Banner3.bol-825x520.png",
+      "https://i.pinimg.com/originals/f6/c5/ee/f6c5eec732cec779d09de553a54d01f1.jpg",
   },
   {
     imageurlpc:
-      "https://oasisinternational.travel/wp-content/uploads/2020/03/85283bdf5d1.jpg",
+      "https://c8.alamy.com/comp/2JAXJ5Y/healthy-plant-based-fast-food-double-border-above-view-over-a-white-wood-banner-background-table-scene-with-cauliflower-crust-pizzas-bean-burgers-2JAXJ5Y.jpg",
+  },
+  {
+    imageurlpc:
+      "https://thumbs.dreamstime.com/b/restaurant-wall-typography-vector-food-bbq-background-motivational-cafe-menu-lettering-chalkboard-165773473.jpg",
   },
 ];
 
