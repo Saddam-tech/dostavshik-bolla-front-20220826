@@ -302,7 +302,7 @@ const Container = styled.div`
     .navigation {
       display: flex;
       align-items: center;
-      gap: 50px;
+      gap: 60px;
       width: 100%;
       height: 58px;
       border-bottom: 1px solid #cecece;
@@ -310,16 +310,19 @@ const Container = styled.div`
       top: 0;
       background-color: #fff;
       overflow-x: scroll;
+      z-index: 9999;
 
       li {
         padding: 10px;
         color: #a0a0a0;
+        transition: 0.3s ease-in-out;
       }
 
       li.active {
         color: #000;
         font-weight: 500;
         border-bottom: 2px solid #000;
+        transition: 0.3s ease-in-out;
       }
     }
 
