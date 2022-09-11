@@ -1,1 +1,8 @@
-export const navigationitems = ["Taniqli", "Menyu", "Qo'shimcha menyu"];
+export const navigationitems = [
+  "Taniqli",
+  "Menyu",
+  "Ikkilamchi",
+  "Ichimliklar",
+  "Saladlar",
+  "Desert",
+];

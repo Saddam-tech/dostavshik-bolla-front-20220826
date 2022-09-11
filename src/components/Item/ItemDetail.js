@@ -110,7 +110,7 @@ export default function ItemDetail() {
 
         {/* content */}
         <div className="content">
-          <h1>Taniqli</h1>
+          <h1>{navigationitems[activeIndex]}</h1>
 
           {Array.from(new Array(8)).map((_, i) => (
             <ListItem key={i} index={i + 1} />
@@ -304,10 +304,12 @@ const Container = styled.div`
       align-items: center;
       justify-content: space-evenly;
       width: 100%;
+      height: 58px;
       border-bottom: 1px solid #cecece;
       position: sticky;
       top: 0;
       background-color: #fff;
+      overflow-x: scroll;
 
       li {
         padding: 10px;
@@ -319,6 +321,15 @@ const Container = styled.div`
         font-weight: 500;
         border-bottom: 2px solid #000;
       }
+    }
+
+    .navigation::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .navigation {
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
     }
 
     .content {
