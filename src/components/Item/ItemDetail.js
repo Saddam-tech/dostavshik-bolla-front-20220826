@@ -10,9 +10,10 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ListItem from "./ListItem";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { navigationitems } from "../helper";
 export default function ItemDetail() {
+  const { uuid } = useParams();
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -119,7 +120,12 @@ export default function ItemDetail() {
           <h1>{navigationitems[activeIndex]}</h1>
 
           {Array.from(new Array(8)).map((_, i) => (
-            <ListItem key={i} index={i + 1} itemid={generateRandomHash()} />
+            <ListItem
+              key={i}
+              index={i + 1}
+              uuid={uuid}
+              itemid={generateRandomHash()}
+            />
           ))}
         </div>
         {/* content */}

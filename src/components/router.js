@@ -15,7 +15,7 @@ export const router = [
   },
   {
     route: "OrderItemDetail",
-    path: "orderitemdetail/:itemid",
+    path: "/itemdetail/:uuid/orderitemdetail/:itemid",
     element: <OrderItemDetail />,
   },
 ];
