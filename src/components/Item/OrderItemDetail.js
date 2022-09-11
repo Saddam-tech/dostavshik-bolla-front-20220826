@@ -7,13 +7,13 @@ import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import IosShareOutlinedIcon from "@mui/icons-material/IosShareOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import CollectionsIcon from "@mui/icons-material/Collections";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ListItem from "./ListItem";
-import { useNavigate } from "react-router-dom";
-import { navigationitems } from "../helper";
+import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
+import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
+import { useNavigate, useParams } from "react-router-dom";
+import { options } from "../helper";
 export default function OrderItemDetail() {
   const navigate = useNavigate();
+  const { uuid, itemid } = useParams();
   const [activeIndex, setActiveIndex] = useState(1);
   return (
     <Container>
@@ -37,78 +37,41 @@ export default function OrderItemDetail() {
       </section>
       {/* icons-set */}
 
-      {/* header */}
-      <section className="header">
-        <div className="h-sub-container-1">
+      {/* content */}
+      <section className="section-1">
+        <h1>12. Somsa</h1>
+
+        <div className="sub-section-1">
           <span>
-            <AccessTimeIcon sx={{ color: "#000" }} />
-            <p className="time">12-22 min</p>
+            <p className="bold">Narx</p>
+            <p className="price">12,900 UZS</p>
           </span>
           <span>
-            <p>Malumot</p>
-            <ArrowForwardIosIcon sx={{ color: "#000", fontSize: 18 }} />
+            <p className="bold">Miqdor</p>
+            <span className="incrdecr">
+              <RemoveCircleOutlineOutlinedIcon />
+              <p>1</p>
+              <AddCircleOutlineOutlinedIcon />
+            </span>
           </span>
         </div>
-        <div className="h-sub-container-2">
-          <span className="sub-1-1">
-            <p>Yetkazib berish:</p>
-            <p>Tekin~</p>
-            <span className="more">yana korish</span>
-          </span>
-          <span className="sub-1-1">
-            <p>Min. buyurtma:</p>
-            <p>5,000 UZS</p>
-          </span>
+        <div className="sub-section-2">
+          <div className="header">
+            <h3>Qoshimcha tanlovlar</h3>
+          </div>
+          <div className="inner-div">
+            <ul>
+              {options.map((el, i) => (
+                <li key={i}>
+                  {" "}
+                  <input type="checkbox" /> {el}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="h-sub-container-3">
-          {Array.from(new Array(5)).map((_, i) => (
-            <div key={i} className="h-card">
-              <span className="sub-span-1">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBUTlDDMxHzWDEXIMMFn_bh5nleUT3Z8JWag&usqp=CAU"
-                  alt=""
-                />
-                <span className="sub-span-2">
-                  <p>Juda mazzali va tez yetib keldi, katta rahmat ...</p>
-                  <span className="stars">
-                    {Array.from(new Array(5)).map((_, i) => (
-                      <StarOutlinedIcon
-                        key={i}
-                        sx={{ color: "#ffbb00", fontSize: 20 }}
-                      />
-                    ))}
-                  </span>
-                </span>
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* navigation  */}
-        <ul className="navigation">
-          {navigationitems.map((el, i) => (
-            <li
-              key={i}
-              onClick={() => setActiveIndex(i)}
-              className={i === activeIndex ? "active" : ""}
-            >
-              {el}
-            </li>
-          ))}
-        </ul>
-        {/* navigation  */}
-
-        {/* content */}
-        <div className="content">
-          <h1>{navigationitems[activeIndex]}</h1>
-
-          {Array.from(new Array(8)).map((_, i) => (
-            <ListItem key={i} index={i + 1} />
-          ))}
-        </div>
-        {/* content */}
       </section>
-      {/* header */}
+      {/* content */}
     </Container>
   );
 }
@@ -162,181 +125,44 @@ const Container = styled.div`
     }
   }
 
-  .card {
+  .section-1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
-    background-color: #fff;
-    width: 90%;
-    height: 140px;
-    position: absolute;
-    top: 190px;
-    gap: 10px;
-    box-shadow: 1px 1px 20px 0.1px #eaeaea;
-    border: 0.5px solid #eaeaea;
-    h1 {
-      font-weight: 550;
-    }
-    .highlight {
-      color: #f99500;
-      font-weight: 600;
-    }
-
-    .sub-container {
-      display: flex;
-      gap: 4px;
-      color: #3a3a3a;
-    }
-  }
-
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-direction: column;
-    margin-top: 70px;
-    height: 100%;
     width: 100%;
-    padding: 23px;
 
-    .h-sub-container-1 {
+    h1 {
+      padding: 20px;
+    }
+
+    .sub-section-1 {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 15px;
+      border-top: 0.5px solid #f2efef;
       width: 100%;
+      padding: 10px 0;
 
       span {
         display: flex;
-        font-size: 15px;
         align-items: center;
-        gap: 10px;
-
-        .time {
-          font-weight: 600;
-        }
-      }
-    }
-
-    .h-sub-container-2 {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      gap: 20px;
-
-      .sub-1-1 {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
+        padding: 10px 20px;
         width: 100%;
-        gap: 20px;
 
-        .more {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50px;
-          background-color: #f2efef;
-          color: #000;
-          font-size: 12px;
-          width: 90px;
-          height: 25px;
+        .bold {
+          font-weight: 500;
         }
-      }
-    }
-    .h-sub-container-3 {
-      display: flex;
-      align-items: center;
-      overflow-x: scroll;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      overflow-y: hidden;
-      height: 150px;
-      gap: 10px;
-
-      .h-card {
-        display: flex;
-        border-radius: 7px;
-        border: 1px solid #f2efef;
-        padding: 10px;
-
-        .sub-span-1 {
-          display: flex;
-          gap: 10px;
-          width: 100%;
-          color: #606060;
-          font-size: 13px;
-
-          img {
-            width: 75px;
-            height: 75px;
-            object-fit: cover;
-          }
-
-          .sub-span-2 {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            width: 170px;
-
-            .stars {
-              display: flex;
-              align-items: center;
-            }
-          }
+        .price {
+          font-size: 18px;
         }
-      }
-    }
 
-    .navigation {
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      width: 100%;
-      height: 58px;
-      border-bottom: 1px solid #cecece;
-      position: sticky;
-      top: 0;
-      background-color: #fff;
-      overflow-x: scroll;
-      z-index: 9999;
-
-      li {
-        padding: 10px;
-        color: #a0a0a0;
-        transition: 0.3s ease-in-out;
-      }
-
-      li.active {
-        color: #000;
-        font-weight: 500;
-        border-bottom: 2px solid #000;
-        transition: 0.3s ease-in-out;
-      }
-    }
-
-    .navigation::-webkit-scrollbar {
-      display: none; /* for Chrome, Safari, and Opera */
-    }
-
-    .navigation {
-      -ms-overflow-style: none; /* for Internet Explorer, Edge */
-      scrollbar-width: none; /* for Firefox */
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      gap: 10px;
-      overflow-y: scroll;
-      scroll-snap-type: x mandatory;
-
-      h1 {
-        font-weight: 500;
-        font-size: 20px;
+        .incrdecr {
+          width: 120px;
+          margin: 0;
+          padding: 0;
+        }
       }
     }
   }
