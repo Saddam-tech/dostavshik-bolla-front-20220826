@@ -19,28 +19,44 @@ export default function OrderItemDetail() {
   const { uuid, itemid } = useParams();
   const [activeIndex, setActiveIndex] = useState(1);
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
+  let version = true;
 
   return (
     <Container>
-      <Carousel height={52} padding="0" objectFit="cover" />
-      {/* icons-set */}
-      <section className="iconset">
-        <div className="sub-1">
-          <ArrowBackOutlinedIcon
-            onClick={() => navigate(-1)}
-            sx={{ color: "#fff" }}
-          />
-          <div className="sub-1-1">
-            <IosShareOutlinedIcon sx={{ color: "#fff" }} />
-            <FavoriteBorderOutlinedIcon sx={{ color: "#fff" }} />
+      {version ? (
+        <>
+          <Carousel height={52} padding="0" objectFit="cover" />
+          <section className="iconset">
+            <div className="sub-1">
+              <ArrowBackOutlinedIcon
+                onClick={() => navigate(-1)}
+                sx={{ color: "#fff" }}
+              />
+              <div className="sub-1-1">
+                <IosShareOutlinedIcon sx={{ color: "#fff" }} />
+                <FavoriteBorderOutlinedIcon sx={{ color: "#fff" }} />
+              </div>
+            </div>
+            <div className="sub-2">
+              <span>1 / 3</span>
+              <CollectionsIcon sx={{ color: "#fff" }} />
+            </div>
+          </section>
+        </>
+      ) : (
+        <section className="iconset-v2-0">
+          <div className="sub-1">
+            <ArrowBackOutlinedIcon
+              onClick={() => navigate(-1)}
+              sx={{ color: "#000" }}
+            />
+            <div className="sub-1-1">
+              <IosShareOutlinedIcon sx={{ color: "#000" }} />
+              <FavoriteBorderOutlinedIcon sx={{ color: "#000" }} />
+            </div>
           </div>
-        </div>
-        <div className="sub-2">
-          <span>1 / 3</span>
-          <CollectionsIcon sx={{ color: "#fff" }} />
-        </div>
-      </section>
-      {/* icons-set */}
+        </section>
+      )}
 
       {/* content */}
       <section className="section-1">
@@ -92,6 +108,7 @@ export default function OrderItemDetail() {
         </div>
       </section>
       {/* content */}
+      <span className="pre-footer">Xozirda buyurtma qilishingiz mumkin!</span>
       <button>Savatchaga qo'shmoq</button>
     </Container>
   );
@@ -143,6 +160,27 @@ const Container = styled.div`
         font-size: 12px;
         width: 60px;
         height: 25px;
+      }
+    }
+  }
+
+  .iconset-v2-0 {
+    display: flex;
+    width: 100%;
+    padding: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .sub-1 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .sub-1-1 {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -222,10 +260,25 @@ const Container = styled.div`
     }
   }
 
+  .pre-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    margin-top: 60px;
+    color: #0ab9ff;
+    background-color: #e5f2ff;
+    font-size: 13px;
+    font-weight: 450;
+    position: fixed;
+    bottom: 90px;
+    text-align: center;
+  }
   button {
     height: 90px;
     width: 100%;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     color: #fff;
     background-color: #0ab9ff;
     font-weight: 550;

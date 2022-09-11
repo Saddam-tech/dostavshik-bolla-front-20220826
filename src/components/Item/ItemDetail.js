@@ -311,6 +311,15 @@ const Container = styled.div`
       }
     }
 
+    .h-sub-container-3::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .h-sub-container-3 {
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
+    }
+
     .navigation {
       display: flex;
       align-items: center;
