@@ -11,8 +11,10 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ListItem from "./ListItem";
 import { useNavigate } from "react-router-dom";
+import { navigationitems } from "../helper";
 export default function ItemDetail() {
   const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <Container>
       <Carousel height={74} padding="0" objectFit="cover" />
@@ -39,7 +41,7 @@ export default function ItemDetail() {
         <h1>Milliy Taomlar</h1>
         <div className="sub-container">
           <VerifiedIcon sx={{ color: "#f99500" }} />
-          <p className="highlight">Tez eltuv</p>
+          <p className="highlight">Yaguar eltuv</p>
           <StarOutlinedIcon sx={{ color: "#ffbb00" }} />
           <p>4.2(804)</p>
         </div>
@@ -91,11 +93,18 @@ export default function ItemDetail() {
             </div>
           ))}
         </div>
+
         {/* navigation  */}
         <ul className="navigation">
-          <li className="active">Taniqli</li>
-          <li>Menyu</li>
-          <li>Qo'shimcha menyu</li>
+          {navigationitems.map((el, i) => (
+            <li
+              key={i}
+              onClick={() => setActiveIndex(i)}
+              className={i === activeIndex ? "active" : ""}
+            >
+              {el}
+            </li>
+          ))}
         </ul>
         {/* navigation  */}
 
