@@ -88,7 +88,7 @@ export default function OrderItemDetail() {
           <div className="inner-div">
             <ul>
               {options.map((el, i) => (
-                <li>
+                <li key={i}>
                   <FormGroup>
                     <FormControlLabel
                       sx={{
