@@ -1,3 +1,4 @@
+import Cart from "./Cart/Cart";
 import ItemDetail from "./Item/ItemDetail";
 import OrderItemDetail from "./Item/OrderItemDetail";
 import Main from "./Main";
@@ -17,5 +18,10 @@ export const router = [
     route: "OrderItemDetail",
     path: "/itemdetail/:uuid/orderitemdetail/:itemid",
     element: <OrderItemDetail />,
+  },
+  {
+    route: "Cart",
+    path: "/cart",
+    element: <Cart />,
   },
 ];
