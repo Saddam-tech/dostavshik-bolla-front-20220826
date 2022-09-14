@@ -12,7 +12,7 @@ export default function Cart() {
   return (
     <Container>
       <div className="header">
-        <CloseOutlinedIcon />
+        <CloseOutlinedIcon onClick={() => navigate(-1)} />
         <h3>Cart</h3>
       </div>
       <div className="section-1">
@@ -110,6 +110,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding-top: 35px;
 
   .header {
     display: flex;
@@ -238,6 +239,10 @@ const Container = styled.div`
       font-weight: 550;
       font-size: 18px;
       position: fixed;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 15px;
       bottom: 0;
     }
   }

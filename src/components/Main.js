@@ -90,7 +90,7 @@ export default function Main() {
         <section className="top_div">
           <FmdGoodOutlinedIcon />
           <div className="inner_wrap">
-            <p>Home</p>
+            <p>Uy</p>
             <KeyboardArrowDownOutlinedIcon color="primary" />
           </div>
         </section>
@@ -173,6 +173,12 @@ export default function Main() {
         >
           <BottomNavigation
             showLabels
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              paddingTop: "8px",
+              height: 85,
+            }}
             value={value}
             onChange={(event, newValue) => {
               setValue(newValue);

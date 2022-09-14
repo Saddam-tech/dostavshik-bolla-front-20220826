@@ -147,9 +147,9 @@ const Container = styled.div`
     width: 100%;
     position: absolute;
     padding: 25px;
-    top: 20px;
+    top: 30px;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 75px;
     height: 54vw;
 
     .sub-1 {

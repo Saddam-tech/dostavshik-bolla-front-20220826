@@ -109,7 +109,7 @@ export default function OrderItemDetail() {
       </section>
       {/* content */}
       <span className="pre-footer">Xozirda buyurtma qilishingiz mumkin!</span>
-      <button>Savatchaga qo'shmoq</button>
+      <button onClick={() => navigate("/cart")}>Savatchaga qo'shmoq</button>
     </Container>
   );
 }
@@ -127,9 +127,9 @@ const Container = styled.div`
     width: 100%;
     position: absolute;
     padding: 25px;
-    top: 3px;
+    top: 30px;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 99px;
     height: 54vw;
 
     .sub-1 {
@@ -139,7 +139,7 @@ const Container = styled.div`
 
       .sub-1-1 {
         display: flex;
-        gap: 25px;
+        gap: 15px;
         justify-content: center;
         align-items: center;
       }
@@ -284,6 +284,10 @@ const Container = styled.div`
     font-weight: 550;
     font-size: 18px;
     position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15px;
     bottom: 0;
   }
 `;
