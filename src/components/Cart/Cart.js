@@ -88,6 +88,17 @@ export default function Cart() {
           </div>
           <KeyboardArrowDownIcon sx={{ color: "#21c0ff", fontSize: 32 }} />
         </div>
+        <div className="footer">
+          <p>
+            Terms and conditions Terms and conditions Terms and conditions Terms
+            and conditions Terms and conditions Terms and conditions Terms and
+            conditions Terms and conditions Terms and conditions Terms and
+            conditions Terms and conditions Terms and conditions Terms and
+            conditions Terms and conditions Terms and conditions Terms and
+            conditions{" "}
+          </p>
+        </div>
+        <button>10,800 UZS to'lovni qilmoq</button>
       </div>
     </Container>
   );
@@ -207,6 +218,27 @@ const Container = styled.div`
         padding: 10px;
         width: 95%;
       }
+    }
+    .footer {
+      background-color: #f7f7f7;
+      height: 100px;
+      padding: 30px;
+      margin-bottom: 170px;
+
+      p {
+        font-size: 12px;
+        color: #c1c1c1;
+      }
+    }
+    button {
+      height: 90px;
+      width: 100%;
+      color: #fff;
+      background-color: #0ab9ff;
+      font-weight: 550;
+      font-size: 18px;
+      position: fixed;
+      bottom: 0;
     }
   }
 `;
