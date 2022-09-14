@@ -101,7 +101,7 @@ export default function Main() {
       </TopPanel>
       <Carousel
         height={43}
-        padding="62px 0 0"
+        padding="100px 0 0"
         objectFit="contain"
         btns={true}
       />
@@ -258,12 +258,12 @@ const Container = styled.div`
 const TopPanel = styled.div`
   display: flex;
   position: fixed;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   padding: 20px;
   top: 0;
   width: 100%;
-  height: 60px;
+  height: 100px;
   background-color: #fff;
   z-index: 9999;
 
