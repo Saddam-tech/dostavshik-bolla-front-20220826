@@ -67,7 +67,7 @@ export default function Cart() {
           <input
             type="text"
             value={requests}
-            placeholder="ex) Iltimos, achchiq qo'shmang"
+            placeholder="ms) Iltimos, achchiq qo'shmang"
             onChange={(e) => setRequests(e.target.value)}
           />
         </div>
@@ -77,7 +77,7 @@ export default function Cart() {
           <input
             type="text"
             value={deliveryRequest}
-            placeholder="ex) Iltimos, eshik tagida qoldiring"
+            placeholder="ms) Iltimos, eshik tagida qoldiring"
             onChange={(e) => setDeliveryRequest(e.target.value)}
           />
         </div>

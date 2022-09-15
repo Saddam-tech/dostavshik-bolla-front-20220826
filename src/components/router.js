@@ -2,6 +2,7 @@ import Cart from "./Cart/Cart";
 import ItemDetail from "./Item/ItemDetail";
 import OrderItemDetail from "./Item/OrderItemDetail";
 import Main from "./Main";
+import Profile from "./Profile/Profile";
 
 export const router = [
   {
@@ -23,5 +24,10 @@ export const router = [
     route: "Cart",
     path: "/cart",
     element: <Cart />,
+  },
+  {
+    route: "Profile",
+    path: "/profile",
+    element: <Profile />,
   },
 ];
