@@ -20,7 +20,7 @@ export default function Cart() {
           <p>Uyga yetkazib berish</p>
           <p className="bold">Namangan shahar, 6 chi kichik tuman</p>
         </div>
-        <span className="edit">Ozgartirmoq</span>
+        <span className="edit">O'zgartirmoq</span>
       </div>
       <div className="section-2">
         <h3>Milliy Taomlar</h3>
