@@ -3,6 +3,7 @@ import ItemDetail from "./Item/ItemDetail";
 import OrderItemDetail from "./Item/OrderItemDetail";
 import Main from "./Main";
 import Profile from "./Profile/Profile";
+import Search from "./Search/Search";
 
 export const router = [
   {
@@ -29,5 +30,10 @@ export const router = [
     route: "Profile",
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    route: "Search",
+    path: "/search",
+    element: <Search />,
   },
 ];

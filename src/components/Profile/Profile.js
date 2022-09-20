@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "../Carousel/Carousel";
 import Paper from "@mui/material/Paper";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -13,8 +13,29 @@ import { useNavigate } from "react-router-dom";
 import { navigationitems, profileOpt } from "../helper";
 export default function Profile() {
   const navigate = useNavigate();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(4);
 
+  useEffect(() => {
+    switch (value) {
+      case 0:
+        navigate("/");
+        break;
+      case 1:
+        navigate("/search");
+        break;
+      case 2:
+        navigate("/favorites");
+        break;
+      case 3:
+        navigate("/orders");
+        break;
+      case 4:
+        navigate("/profile");
+        break;
+      default:
+        navigate("/profile");
+    }
+  }, [value]);
   return (
     <Container>
       <section className="header">
