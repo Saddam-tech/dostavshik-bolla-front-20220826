@@ -38,22 +38,22 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 45px;
+    padding-top: 55px;
     gap: 15px;
     .input-wrap {
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 20px;
+      border-radius: 30px;
       border: 0.1px solid #eaeaea;
       width: 80%;
-      height: 38px;
+      height: 48px;
       box-shadow: 1.4px 1.4px 1px 0.7px #eaeaea;
       input {
         width: 90%;
       }
       input::placeholder {
-        /* padding-left: 15px; */
+        font-size: 14px;
       }
     }
   }

@@ -98,7 +98,9 @@ export default function Cart() {
             conditions{" "}
           </p>
         </div>
-        <button>10,800 UZS to'lovni qilmoq</button>
+        <button onClick={() => navigate("/search")}>
+          10,800 UZS to'lovni qilmoq
+        </button>
       </div>
     </Container>
   );
