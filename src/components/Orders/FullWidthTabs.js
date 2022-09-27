@@ -6,6 +6,7 @@ import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
+import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import Box from "@mui/material/Box";
 
 function TabPanel(props) {
@@ -44,6 +45,7 @@ function a11yProps(index) {
 export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const [orders, setOrders] = React.useState([]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -54,7 +56,7 @@ export default function FullWidthTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", height: "100%" }}>
       <AppBar
         sx={{ bgcolor: "#fff", color: "#000", paddingTop: "50px" }}
         position="static"
@@ -71,18 +73,33 @@ export default function FullWidthTabs() {
           <Tab label="Kelayapgan" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
-      <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
-        </TabPanel>
-      </SwipeableViews>
+      {orders.length > 0 ? (
+        <SwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={value}
+          onChangeIndex={handleChangeIndex}
+        >
+          <TabPanel value={value} index={0} dir={theme.direction}>
+            Item One
+          </TabPanel>
+          <TabPanel value={value} index={1} dir={theme.direction}>
+            Item Two
+          </TabPanel>
+        </SwipeableViews>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <AssignmentOutlinedIcon sx={{ color: "#eaeaea", fontSize: "50px" }} />
+        </div>
+      )}
     </Box>
   );
 }
