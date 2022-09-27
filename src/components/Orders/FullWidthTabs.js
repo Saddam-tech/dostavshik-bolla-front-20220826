@@ -93,11 +93,27 @@ export default function FullWidthTabs() {
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
-            width: "100%",
-            height: "100%",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            right: "50%",
+            bottom: "50%",
+            gap: "18px",
           }}
         >
           <AssignmentOutlinedIcon sx={{ color: "#eaeaea", fontSize: "50px" }} />
+          <button
+            style={{
+              border: "1px solid #b7b7b7",
+              borderRadius: "5px",
+              padding: "6px",
+              fontSize: "12px",
+              color: "#000",
+              width: "180px",
+            }}
+          >
+            Buyurtmalar tarixini ko'rish
+          </button>
         </div>
       )}
     </Box>
