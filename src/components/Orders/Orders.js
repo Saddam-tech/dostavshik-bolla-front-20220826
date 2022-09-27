@@ -10,8 +10,9 @@ import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Paper from "@mui/material/Paper";
 import { navigationitems } from "../helper";
-export default function Search() {
-  const [value, setValue] = useState(1);
+import FullWidthTabs from "./FullWidthTabs";
+export default function Orders() {
+  const [value, setValue] = useState(3);
   const { uuid } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
@@ -32,30 +33,12 @@ export default function Search() {
         navigate("/profile");
         break;
       default:
-        navigate("/search");
+        navigate("/orders");
     }
   }, [value]);
   return (
     <Container>
-      <section className="sub-section-1">
-        <div className="input-wrap">
-          <input placeholder="Xoxlagan taomingizni qidiring!" type="text" />
-        </div>
-        <SearchOutlinedIcon sx={{ fontSize: 30, color: "#3f3f3f" }} />
-      </section>
-      <section className="sub-section-2">
-        <ul>
-          {Array.from(new Array(100)).map((_, i) => (
-            <li key={i} className="inner-section-1">
-              <img
-                src="https://media.istockphoto.com/photos/fresh-tasty-burger-picture-id495204032?k=20&m=495204032&s=612x612&w=0&h=x44AnT8kHv-apqnG9t1ILwf2sIr4uq14CUB7MBaiuOI="
-                alt=""
-              />
-              <p>Yangilik</p>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <FullWidthTabs />
       <Paper
         sx={{
           position: "fixed",
@@ -107,62 +90,4 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
-
-  .sub-section-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 55px 0 7px;
-    gap: 15px;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-
-    .input-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 30px;
-      border: 0.1px solid #eaeaea;
-      width: 80%;
-      height: 48px;
-      box-shadow: 1.4px 1.4px 1px 0.7px #eaeaea;
-      input {
-        width: 90%;
-      }
-      input::placeholder {
-        font-size: 14px;
-      }
-    }
-  }
-  .sub-section-2 {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 105px;
-    margin-bottom: 70px;
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      flex-wrap: wrap;
-      padding: 20px;
-      gap: 20px;
-
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        img {
-          height: 100px;
-          width: 100px;
-          object-fit: cover;
-        }
-      }
-    }
-  }
 `;
