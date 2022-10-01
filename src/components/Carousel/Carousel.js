@@ -8,7 +8,7 @@ import { onClickNextBtn, onClickPreBtn } from "../../Utils/Util";
 let banners = [
   {
     imageurlpc:
-      "https://previews.123rf.com/images/tul/tul1705/tul170500047/79022622-fast-food-vector-trendy-banner-design-concept-modern-style-with-thin-line-art-fast-food-icons-on-gra.jpg",
+      "https://thumbs.dreamstime.com/b/fast-food-banner-juicy-meat-burger-french-fries-potatoes-cola-drink-blue-background-take-away-meal-unhealthy-diet-fast-food-133646062.jpg",
   },
 
   {

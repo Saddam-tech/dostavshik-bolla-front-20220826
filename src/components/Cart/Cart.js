@@ -224,7 +224,7 @@ const Container = styled.div`
     }
     .footer {
       background-color: #f7f7f7;
-      height: 100px;
+      height: 100%;
       padding: 30px;
       margin-bottom: 170px;
 
