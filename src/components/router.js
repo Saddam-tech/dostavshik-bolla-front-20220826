@@ -1,4 +1,5 @@
 import Cart from "./Cart/Cart";
+import Favorites from "./Favorites/Favorites";
 import ItemDetail from "./Item/ItemDetail";
 import OrderItemDetail from "./Item/OrderItemDetail";
 import Main from "./Main";
@@ -41,5 +42,10 @@ export const router = [
     route: "Orders",
     path: "/orders",
     element: <Orders />,
+  },
+  {
+    route: "Favorites",
+    path: "/favorites",
+    element: <Favorites />,
   },
 ];

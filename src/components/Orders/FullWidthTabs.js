@@ -70,7 +70,7 @@ export default function FullWidthTabs() {
           aria-label="full width tabs example"
         >
           <Tab label="Oldingi" {...a11yProps(0)} />
-          <Tab label="Kelayapgan" {...a11yProps(1)} />
+          <Tab label="Kelayotgan" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       {orders.length > 0 ? (
