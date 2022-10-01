@@ -30,8 +30,8 @@ export default function Post() {
           <p>4.9(386)</p>
         </div>
         <div className="inner-div-1">
-          <p>1.4km ·</p>
-          <p>14 ~ 24 min ·</p>
+          <p>1.4km · </p>
+          <p>14 ~ 24 min · </p>
           <p className="bold">Tekin Eltuv ~</p>
         </div>
       </div>
@@ -83,6 +83,7 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       padding-left: 14px;
+      gap: 3px;
       p {
         font-size: 10px;
       }
