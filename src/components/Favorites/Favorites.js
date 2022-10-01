@@ -44,18 +44,18 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin: 130px 0 20px 0;
+  margin: 140px 0 20px 0;
   .navbar {
     display: flex;
     gap: 10px;
     flex-direction: column;
     width: 100%;
     border-bottom: 11px solid #f4f4f4;
-    padding: 30px 0 10px 0;
+    padding: 40px 0 10px 0;
     background-color: #fff;
     position: fixed;
     top: 0;
-    height: 150px;
+    height: 160px;
 
     .inner_bar_1 {
       padding-left: 30px;
