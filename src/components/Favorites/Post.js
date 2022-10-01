@@ -13,10 +13,13 @@ export default function Post() {
 
   return (
     <Container>
-      <img
-        src="https://vegnews.com/media/W1siZiIsIjI5NDQ2L1ZlZ05ld3MuVmVnYW5GYXN0Rm9vZC5Nb250eXNHb29kQnVyZ2VyLmpwZyJdLFsicCIsInRodW1iIiwiMTYwMHg5NDYjIix7ImZvcm1hdCI6ImpwZyJ9XSxbInAiLCJvcHRpbWl6ZSJdXQ/VegNews.VeganFastFood.MontysGoodBurger.jpg?sha=892e9c726614c0f8"
-        alt=""
-      />
+      <div className="image-container">
+        <img
+          src="https://vegnews.com/media/W1siZiIsIjI5NDQ2L1ZlZ05ld3MuVmVnYW5GYXN0Rm9vZC5Nb250eXNHb29kQnVyZ2VyLmpwZyJdLFsicCIsInRodW1iIiwiMTYwMHg5NDYjIix7ImZvcm1hdCI6ImpwZyJ9XSxbInAiLCJvcHRpbWl6ZSJdXQ/VegNews.VeganFastFood.MontysGoodBurger.jpg?sha=892e9c726614c0f8"
+          alt=""
+        />
+        <span className="number">12 Marotaba</span>
+      </div>
       <div className="sub-container">
         <div className="inner-div">
           <h4>Les Ailes</h4>
@@ -45,10 +48,25 @@ const Container = styled.div`
   justify-content: flex-start;
   width: 100%;
   margin-top: 30px;
-  img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+  .image-container {
+    position: relative;
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+    .number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 3px;
+      background-color: #eaeaea;
+      border-radius: 5px;
+      padding: 0 5px;
+      font-size: 12px;
+      color: #3a3a3a;
+      font-weight: 500;
+    }
   }
   .sub-container {
     display: flex;
