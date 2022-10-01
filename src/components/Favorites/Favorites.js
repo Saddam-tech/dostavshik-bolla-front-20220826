@@ -15,7 +15,7 @@ export default function Favorites() {
     <Container>
       <section className="navbar">
         <div className="inner_bar_1">
-          <ArrowBackOutlinedIcon />
+          <ArrowBackOutlinedIcon onClick={() => navigate(-1)} />
           <h3>Sevimli</h3>
           <p className="edit">O'zgartirmoq</p>
         </div>
@@ -99,7 +99,9 @@ const Container = styled.div`
   .posts {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 20px;
     flex-direction: column;
   }
 `;
