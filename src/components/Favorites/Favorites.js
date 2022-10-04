@@ -56,6 +56,7 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     height: 160px;
+    z-index: 999;
 
     .inner_bar_1 {
       padding-left: 30px;

@@ -63,7 +63,7 @@ const Container = styled.div`
       background-color: #eaeaea;
       border-radius: 5px;
       padding: 0 5px;
-      font-size: 12px;
+      font-size: 10px;
       color: #3a3a3a;
       font-weight: 500;
     }
