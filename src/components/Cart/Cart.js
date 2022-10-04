@@ -226,7 +226,7 @@ const Container = styled.div`
       background-color: #f7f7f7;
       height: 100%;
       padding: 30px;
-      margin-bottom: 170px;
+      padding-bottom: 130px;
 
       p {
         font-size: 12px;
